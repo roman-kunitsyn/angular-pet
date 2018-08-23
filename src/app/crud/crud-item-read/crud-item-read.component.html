@@ -1,0 +1,8 @@
+<div class="app-crud-item-read">
+  <h2>Read crud item</h2>
+  <div *ngIf="crudItem">
+    <div>
+      <span>title: </span>{{crudItem.title}}</div>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>

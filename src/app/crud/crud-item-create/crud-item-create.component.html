@@ -1,0 +1,11 @@
+<div class="app-crud-item-create">
+  <h2>Create crud item</h2>
+  <div>
+    <label>title:
+      <input [(ngModel)]="crudItem.title"
+             placeholder="title">
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="createCrudItem(crudItem.title)">create</button>
+</div>

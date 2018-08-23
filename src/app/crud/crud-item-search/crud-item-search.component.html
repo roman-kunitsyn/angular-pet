@@ -1,0 +1,18 @@
+<div class="app-crud-item-search">
+  <h2>Search crud item</h2>
+  <div>
+    <label>title:
+      <input #searchTerm
+             id="search-term"
+             (keyup)="searchCrudItem(searchTerm.value)" />
+    </label>
+  </div>
+  <div>
+    <ul class="search-result">
+      <li *ngFor="let crudItem of crudList$ | async">
+         {{crudItem.title}}
+      </li>
+    </ul>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>

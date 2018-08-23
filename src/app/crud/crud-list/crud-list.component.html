@@ -1,0 +1,10 @@
+<div class="app-crud-list"
+     *ngIf="crudList">
+  <h2>Crud list</h2>
+  <ul class="crud-list">
+    <li *ngFor="let crudItem of crudList">
+      <span class="badge">{{crudItem.id}}</span> {{crudItem.title}}
+      <app-crud-toolbar [crudItem]="crudItem"></app-crud-toolbar>
+    </li>
+  </ul>
+</div>
