@@ -1,10 +1,17 @@
-<div class="app-crud-list"
-     *ngIf="crudList">
-  <h2>Crud list</h2>
-  <ul class="crud-list">
-    <li *ngFor="let crudItem of crudList">
-      <span class="badge">{{crudItem.id}}</span> {{crudItem.title}}
-      <app-crud-toolbar [crudItem]="crudItem"></app-crud-toolbar>
-    </li>
-  </ul>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="app-crud-list"
+           *ngIf="crudList">
+        <h2>CRUD list</h2>
+        <ul class="list-group">
+          <li *ngFor="let crudItem of crudList"
+              class="list-group-item">
+            <span class="badge">{{crudItem.id}}</span> {{crudItem.title}}
+            <app-crud-toolbar [crudItem]="crudItem"></app-crud-toolbar>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

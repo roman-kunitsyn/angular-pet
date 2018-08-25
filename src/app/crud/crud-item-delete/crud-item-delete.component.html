@@ -1,9 +1,15 @@
-<div class="app-crud-item-delete">
-  <h2>Delete crud item</h2>
-    <div *ngIf="crudItem">
-      <div>
-        <span>title: </span>{{crudItem.title}}</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="app-crud-item-delete">
+        <h2>Delete CRUD item</h2>
+        <div *ngIf="crudItem">
+          <div>
+            <span>title: </span>{{crudItem.title}}</div>
+        </div>
+        <button (click)="goBack()">go back</button>
+        <button (click)="deleteCrudItem(crudItem)">delete</button>
+      </div>
     </div>
-    <button (click)="goBack()">go back</button>
-    <button (click)="deleteCrudItem(crudItem)">delete</button>
+  </div>
 </div>

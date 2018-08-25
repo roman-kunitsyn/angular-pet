@@ -1,11 +1,24 @@
-<div class="app-crud-item-create">
-  <h2>Create crud item</h2>
-  <div>
-    <label>title:
-      <input [(ngModel)]="crudItem.title"
-             placeholder="title">
-    </label>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="app-crud-item-create">
+        <h2>Create CRUD item</h2>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"
+                  id="basic-addon1">Title</span>
+          </div>
+          <input type="text"
+                 class="form-control"
+                 placeholder="Username"
+                 aria-label="Username"
+                 aria-describedby="basic-addon1"
+                 [(ngModel)]="crudItem.title"
+                 placeholder="title">
+        </div>
+        <button (click)="goBack()">go back</button>
+        <button (click)="createCrudItem(crudItem.title)">create</button>
+      </div>
+    </div>
   </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="createCrudItem(crudItem.title)">create</button>
 </div>
